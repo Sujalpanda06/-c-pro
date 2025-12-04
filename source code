@@ -1,0 +1,40 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <ctype.h>
+int main()
+
+{
+    char str[100];
+    int i;
+    int vowels=0,consonants=0;// Initialize a counter for vowels
+    printf("enter a string:");
+    //scanf("%s,str");
+    scanf("%[^\n]s",str);
+    
+    
+    // Iterate through each character of the string
+    for(i = 0; str[i]!='\0'; i++){
+      if (str[i]=='a'|| str[i]=='e'|| str[i]=='i'||str[i] == 'o' || str[i] =='u'||
+        str[i] == 'A' || str[i]=='E' || str[i]=='I' ||
+        str[i]=='O' ||  str[i]=='U')
+    {
+        vowels++;//Increment the counter if it's a vowel
+    }
+    else
+    if (isalpha(str[i]))
+    consonants++;
+    
+}   
+printf("number of vowels in the string:%d\n", vowels);
+printf ("number of consonants in the string :%d\n" ,consonants);
+return 0;
+        
+}
